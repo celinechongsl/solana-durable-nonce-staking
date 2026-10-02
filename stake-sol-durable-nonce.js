@@ -82,7 +82,7 @@ async function createStakeTransaction(wallet, validatorVoteAccount, nonceAccount
 }
 
 async function verify(tx, nonceAccount) {
-  const ix = tx.instructions[0];
+  const ix = tx.instructions[0]; // 4 = AdvanceNonceAccount instruction in the System Program
   if (!ix.programId.equals(SystemProgram.programId) || ix.data.readUInt32LE(0) !== 4 || !ix.keys[0].pubkey.equals(nonceAccount)) {
     throw new Error('First instruction must advance our nonce account');
   }
