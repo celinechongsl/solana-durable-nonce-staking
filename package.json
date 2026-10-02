@@ -5,6 +5,9 @@
   "scripts": {
     "stake": "node stake-sol-durable-nonce.js"
   },
+  "engines": {
+    "node": ">=22"
+  },
   "license": "MIT",
   "dependencies": {
     "@solana/web3.js": "^1.98.0",
