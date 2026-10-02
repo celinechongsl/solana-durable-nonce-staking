@@ -1,0 +1,15 @@
+{
+  "name": "solana-durable-nonce-staking",
+  "version": "1.0.0",
+  "description": "Stake SOL through Figment's API with a durable nonce, so slow signers (HSM, MPC, custody approvals) never hit blockhash expiry.",
+  "scripts": {
+    "stake": "node stake-sol-durable-nonce.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.98.0",
+    "axios": "^1.7.0",
+    "bs58": "^5.0.0",
+    "dotenv": "^16.4.5"
+  }
+}
